@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "lib": [
+      "es2017",
+      "es2015",
+      "es2015.promise",
+      "dom"
+    ],
+    "allowJs": false,
+    "declaration": false,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+
+    },
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "inlineSourceMap": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
+}

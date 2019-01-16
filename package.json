@@ -1,0 +1,30 @@
+{
+  "name": "blog-hook",
+  "version": "0.0.1",
+  "description": "为blog添加一些hook",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:watch": "nodemon",
+    "prestart:prod": "tsc",
+    "start:prod": "node dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsJoy/blog-hook.git"
+  },
+  "keywords": [],
+  "author": "niuyuanqiang <1347827212@qq.com> (https://github.com/AsJoy)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AsJoy/blog-hook/issues"
+  },
+  "homepage": "https://github.com/AsJoy/blog-hook#readme",
+  "dependencies": {
+    "@types/node": "^10.12.18"
+  },
+  "devDependencies": {
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  }
+}
