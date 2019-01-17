@@ -10,7 +10,7 @@ log4js.configure({
       type: 'console'
     },
     fileDate: {
-      type: 'dateFile',
+      type: 'dateFile.log',
       pattern: 'yyyy-MM-dd.log',
       filename: path.resolve(__dirname, '../../log/project'),
     },
