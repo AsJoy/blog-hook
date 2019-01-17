@@ -13,7 +13,7 @@ const server = http.createServer(function (req: IncomingMessage, res: ServerResp
       bufferres += buffer.toString()
   })
   req.on('end', () => {
-    log.info(`url: ${req.url} : `, `headers: ${JSON.stringify(req.headers)} `, `${bufferres}`, data)
+    log.info(`url: ${req.url} : `, `headers: ${JSON.stringify(req.headers)} `, `${JSON.stringify(JSON.parse(bufferres), null, 2)}`, data)
     res.end('test')
   })
 })
