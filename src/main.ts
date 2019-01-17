@@ -18,6 +18,6 @@ const server = http.createServer(function (req: IncomingMessage, res: ServerResp
   })
 })
 
-server.listen(8008)
+server.listen(80)
 
 
