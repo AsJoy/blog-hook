@@ -15,7 +15,7 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-
+      "resources/*": ["./src/resources/*"]
     },
     "typeRoots": [
       "./node_modules/@types"
@@ -23,6 +23,7 @@
     "allowSyntheticDefaultImports": true,
     "inlineSourceMap": false,
     "experimentalDecorators": true,
+    "resolveJsonModule": true,
     "emitDecoratorMetadata": true
   },
   "include": [

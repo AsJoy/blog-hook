@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/AsJoy/blog-hook#readme",
   "dependencies": {
-    "@types/node": "^10.12.18"
+    "@types/node": "^10.12.18",
+    "log4js": "^3.0.6"
   },
   "devDependencies": {
     "ts-node": "^7.0.1",
