@@ -1,0 +1,16 @@
+log4js: # log4js配置
+  appenders:
+    console: {  type: 'console' }
+    fileDate:
+      type: dateFile
+      pattern: yyyy-MM-dd.log
+      filename: "./log/project.log"
+  pm2: false
+  categories:
+    default:
+      appenders:
+      - console
+      -  fileDate
+      level: trace
+server: # 服务器相关配置
+  port: 8008

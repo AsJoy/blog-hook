@@ -6,8 +6,12 @@
   "scripts": {
     "start": "node index.js",
     "start:watch": "nodemon",
-    "prestart:prod": "tsc",
-    "start:prod": "node dist/main.js"
+    "start:prod": "node dist/main.js",
+    "build:dev": "NODE_ENV=test node dist/main.js",
+    "build": "NODE_ENV=production node dist/main.js",
+    "prestart:prod": "rm -rf ./dist/ && tsc",
+    "test:watch": "jest --watch --config=jest.config.js",
+    "test": "jest --config=jest.config.js"
   },
   "repository": {
     "type": "git",
@@ -21,10 +25,17 @@
   },
   "homepage": "https://github.com/AsJoy/blog-hook#readme",
   "dependencies": {
-    "@types/node": "^10.12.18",
+    "config": "^3.0.1",
+    "js-yaml": "^3.12.1",
     "log4js": "^3.0.6"
   },
   "devDependencies": {
+    "@types/config": "0.0.34",
+    "@types/jest": "^23.3.13",
+    "@types/js-yaml": "^3.11.4",
+    "@types/node": "^10.12.18",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
     "ts-node": "^7.0.1",
     "typescript": "^3.2.2"
   }

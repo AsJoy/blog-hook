@@ -5,6 +5,7 @@
 /build
 /tmp
 /out-tsc
+*/test # 屏蔽一些功能自测的脚本
 
 # dependencies
 /node_modules

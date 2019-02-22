@@ -1,7 +1,15 @@
 import http = require("http");
-import rebuild = require("./hook/rebuild");
+import rebuild = require("./component/hook/rebuild");
 import log = require("./util/logconfig");
+import path = require("path");
+import config = require("config");
+
 import { IncomingMessage, ServerResponse } from "http"
+import { handleError, isTrustedError } from './util/apperror'
+
+const serConfig = config.get<any>('server')
+
+process.env["NODE_CONFIG_DIR"] = path.resolve(__dirname, "../config");
 
 const server = http.createServer(function (req: IncomingMessage, res: ServerResponse) {
   const data = rebuild()
@@ -13,11 +21,23 @@ const server = http.createServer(function (req: IncomingMessage, res: ServerResp
       bufferres += buffer.toString()
   })
   req.on('end', () => {
-    log.info(`url: ${req.url} : `, `headers: ${JSON.stringify(req.headers)} `, `${JSON.stringify(JSON.parse(bufferres), null, 2)}`, data)
-    res.end('test')
+    try {
+      log.info(`url: ${req.url} : `, `headers: ${JSON.stringify(req.headers)} `, `${bufferres && JSON.stringify(JSON.parse(bufferres), null, 2)}`, data)
+    } finally {
+      res.end('test')
+    }
   })
 })
 
-server.listen(80)
+process.on('unhandledRejection', (reason) => { // 拦截未处理的promise rejection
+  throw reason;
+})
+process.on('uncaughtException', function(error) {
+  handleError(error);
+  if(!isTrustedError(error))
+    process.exit(1)
+});
 
+
+server.listen(serConfig.port)
 

@@ -1,0 +1,8 @@
+log4js: # log4js配置
+  categories:
+    default:
+      appenders:
+      -  fileDate
+      level: trace
+server: # 服务器相关配置
+  port: 80
