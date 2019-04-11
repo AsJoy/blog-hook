@@ -1,6 +1,6 @@
 import http = require("http");
 import rebuild = require("./component/hook/rebuild");
-import log = require("./util/logconfig");
+import log = require("@/util/logconfig");
 import path = require("path");
 import config = require("config");
 
@@ -38,6 +38,6 @@ process.on('uncaughtException', function(error) {
     process.exit(1)
 });
 
-
+console.log(112222)
 server.listen(serConfig.port)
 

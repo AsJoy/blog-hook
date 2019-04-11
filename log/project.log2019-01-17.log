@@ -1,0 +1,4 @@
+[2019-01-17T20:23:10.027] [INFO] default - url: /?id=122 :  headers: {"host":"192.168.22.34","user-agent":"curl/7.54.0","accept":"*/*"}   rebuild project
+[2019-01-17T20:24:57.223] [INFO] default - url: /?id=122 :  headers: {"host":"192.168.22.34","user-agent":"curl/7.54.0","accept":"*/*"}   rebuild project
+[2019-01-17T20:58:24.350] [INFO] default - url: /?id=122 :  headers: {"host":"192.168.22.34:8008","user-agent":"curl/7.54.0","accept":"*/*"}   rebuild project
+[2019-01-17T20:58:50.857] [INFO] default - url: /?id=122 :  headers: {"host":"192.168.22.34","user-agent":"curl/7.54.0","accept":"*/*"}   rebuild project
