@@ -1,4 +1,4 @@
 
-export = function () {
+export = function() {
   return 'rebuild project'
 }

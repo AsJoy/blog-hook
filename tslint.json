@@ -1,0 +1,35 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {
+        "ordered-imports": false,
+        "member-access": false,
+        "arrow-parens": false,
+        "object-literal-sort-keys": false,
+        "semicolon": [true, "never"],
+        "quotemark": [ true, "single"],
+        "indent": [true, "spaces", 2]
+    },
+    "rules": {
+        "no-var-requires": false,
+        "ordered-imports": false,
+        "member-access": false,
+        "arrow-parens": false,
+        "interface-name": [
+            true,
+            "never-prefix"
+        ],
+//        "no-import-side-effect": [true, {"ignore-module": "(\\.html|\\.scss)$"}],
+        "semicolon": [true, "never"],
+        "no-unused-expression": false,
+        "indent": [true, "spaces", 2],
+        "max-line-length": false,
+        "quotemark": [ true, "single", "jsx-double"],
+        "max-classes-per-file": false,
+        "object-literal-sort-keys": false,
+        "no-console": false
+    },
+    "rulesDirectory": []
+}

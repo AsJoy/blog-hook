@@ -30,6 +30,7 @@
 /.sass-cache
 /.cache-loader
 /connect.lock
+# 测试通过率
 /coverage
 /libpeerconnection.log
 npm-debug.log

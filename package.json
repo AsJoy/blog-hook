@@ -8,10 +8,13 @@
     "start:watch": "nodemon",
     "start:debug": "nodemon --config nodemon-debug.json",
     "build": "tsc -p tsconfig.build.json",
-    "build:dev": "NODE_ENV=test node dist/main.js",
+    "start:dev": "npm run prestart:prod && NODE_ENV=test node dist/main.js",
     "start:prod": "NODE_ENV=production node dist/main.js",
     "prestart:prod": "rm -rf ./dist/ && npm run build",
+    "lint:fix": "tslint --fix ./src/**/*.ts",
+    "lint": "tslint ./src/**/*.ts",
     "test:watch": "jest --watch --config=jest.config.js",
+    "test:coverage": "jest --coverage --config=jest.config.js",
     "test": "jest --config=jest.config.js"
   },
   "repository": {
@@ -31,14 +34,16 @@
     "log4js": "^3.0.6"
   },
   "devDependencies": {
-    "tsconfig-paths": "^3.8.0",
     "@types/config": "0.0.34",
     "@types/jest": "^23.3.13",
     "@types/js-yaml": "^3.11.4",
     "@types/node": "^10.12.18",
     "jest": "^23.6.0",
+    "rimraf": "^2.6.3",
     "ts-jest": "^23.10.5",
     "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.8.0",
+    "tslint": "^5.15.0",
     "typescript": "^3.2.2"
   }
 }
