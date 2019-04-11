@@ -1,3 +1,4 @@
+import '@/initialize'
 import http = require("http");
 import rebuild = require("./component/hook/rebuild");
 import log = require("@/util/logconfig");
@@ -5,7 +6,6 @@ import path = require("path");
 import config = require("config");
 
 import { IncomingMessage, ServerResponse } from "http"
-import { handleError, isTrustedError } from './util/apperror'
 
 const serConfig = config.get<any>('server')
 
@@ -29,15 +29,5 @@ const server = http.createServer(function (req: IncomingMessage, res: ServerResp
   })
 })
 
-process.on('unhandledRejection', (reason) => { // 拦截未处理的promise rejection
-  throw reason;
-})
-process.on('uncaughtException', function(error) {
-  handleError(error);
-  if(!isTrustedError(error))
-    process.exit(1)
-});
-
-console.log(112222)
 server.listen(serConfig.port)
 

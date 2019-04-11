@@ -4,7 +4,6 @@ import fs = require("fs");
 
 import path = require("path");
 
-
 describe('test yaml', () => {
   it('should be equal', function () {
     const res = fs.readFileSync(path.resolve(__dirname, './test.yaml'), 'utf-8')
