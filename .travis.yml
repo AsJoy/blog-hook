@@ -1,0 +1,21 @@
+language: node_js
+
+branches:
+  only:
+  - master
+  - /^feat-.*$/
+jobs:
+  include:
+    - node_js: '12' 
+      os: linux
+      env: EXTRA_TESTS=true
+
+cache: npm
+
+script: npm run test
+notifications:
+  email:
+    recipients:
+      - 1347827212@qq.com
+    on_success: never 
+    on_failure: always # default: always
