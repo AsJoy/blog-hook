@@ -30,7 +30,7 @@
   "homepage": "https://github.com/AsJoy/blog-hook#readme",
   "dependencies": {
     "config": "^3.0.1",
-    "js-yaml": "^3.12.1",
+    "js-yaml": "^4.1.1",
     "log4js": "^3.0.6"
   },
   "devDependencies": {
